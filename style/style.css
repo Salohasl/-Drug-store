@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+  font-family: "Arimo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.menuBtn.active span:nth-of-type(1) {
+  display: none;
+}
+
+.menuBtn.active span:nth-of-type(2) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(45deg);
+}
+
+.menuBtn.active span:nth-of-type(3) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(-45deg);
+}
+
+.menuBtn {
+  cursor: pointer;
+  width: 100px;
+  height: 30px;
+  margin-left: 1%;
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuBtn span {
+  width: 34px;
+  height: 3px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  transition: all 0.5s;
+  border-radius: 2px;
+}
+
+.menuBtn span:nth-of-type(2) {
+  top: calc(35% - 5px);
+}
+
+.menuBtn span:nth-of-type(3) {
+  top: calc(60% + 5px);
+}
+
+header {
+  top: 0;
+  position: fixed;
+  right: 0%;
+  left: 0%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  z-index: 5;
+}
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  list-style-type: none;
+  gap: 20px;
+}
+header .link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  margin-right: 40px;
+}
+header .link a {
+  font-weight: 600;
+  font-size: 15px;
+}
+header .link a img {
+  margin-top: 0px;
+}
+header a {
+  text-decoration: none;
+  color: black;
+  transition: 0.5s;
+}
+header a img {
+  margin-top: -15px;
+  margin-left: 40px;
+}
+header a:hover {
+  color: rgba(0, 0, 255, 0.7);
+}
+
+main {
+  padding-top: 170px;
+  margin-left: 60px;
+}
+main .content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+main .content .content-left {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+main .content .content-left .about {
+  width: 100%;
+}
+main .content .content-left .about h2 {
+  font-size: 45px;
+  font-weight: 500;
+}
+main .content .content-left .about p {
+  margin-top: 40px;
+  width: 500px;
+  font-weight: 400;
+  font-size: 20px;
+}
+main .content .content-left .about button {
+  margin-top: 40px;
+  background-color: rgba(0, 0, 255, 0.7);
+  font-size: 18px;
+  padding: 20px;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
+}
+main .content .content-left .about button:hover {
+  background-color: blue;
+}
+main .content .content-left .like {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 70px;
+}
+main .content .content-left .like .like-item {
+  background-color: rgba(88, 88, 88, 0.2);
+  padding: 20px;
+  width: 250px;
+  border-radius: 30px;
+}
+main .content .content-left .like .like-item p {
+  margin-top: 10px;
+  line-height: 25px;
+  font-size: 20px;
+  font-weight: 400;
+}
+main .content .content-right img {
+  width: 700px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.catalogy {
+  margin-top: 100px;
+}
+.catalogy h2 {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 300;
+}
+.catalogy p {
+  margin-top: 30px;
+  font-size: 20px;
+  text-align: center;
+  color: rgba(88, 88, 88, 0.7);
+}/*# sourceMappingURL=style.css.map */
