@@ -66,6 +66,7 @@ header {
   justify-content: space-between;
   background-color: white;
   z-index: 5;
+  height: 100px;
 }
 header nav ul {
   display: flex;
@@ -74,6 +75,14 @@ header nav ul {
   justify-content: space-around;
   list-style-type: none;
   gap: 20px;
+}
+header nav a {
+  text-decoration: none;
+  color: black;
+  transition: 0.5s;
+}
+header nav a:hover {
+  color: rgba(0, 0, 255, 0.7);
 }
 header .link {
   display: flex;
@@ -86,21 +95,37 @@ header .link {
 header .link a {
   font-weight: 600;
   font-size: 15px;
+  text-decoration: none;
+  color: black;
 }
 header .link a img {
   margin-top: 0px;
 }
-header a {
+header .link a:hover {
+  color: rgba(0, 0, 255, 0.7);
+}
+header .logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+header .logo a {
   text-decoration: none;
   color: black;
   transition: 0.5s;
 }
-header a img {
-  margin-top: -15px;
+header .logo a img {
+  margin-top: -20px;
   margin-left: 40px;
 }
-header a:hover {
+header .logo a:hover {
   color: rgba(0, 0, 255, 0.7);
+}
+header .logo p {
+  margin-top: -30px;
+  margin-left: 40px;
+  font-weight: bold;
 }
 
 main {
@@ -183,4 +208,227 @@ main .content .content-right img {
   font-size: 20px;
   text-align: center;
   color: rgba(88, 88, 88, 0.7);
+}
+.catalogy .catalogy-product .name {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.catalogy .catalogy-product .name button {
+  border: none;
+  background-color: rgba(88, 88, 88, 0);
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.catalogy .catalogy-product .name button.active {
+  color: rgba(0, 0, 255, 0.7);
+  border-bottom: 1px solid rgba(0, 0, 255, 0.7);
+}
+.catalogy .catalogy-product .name button:hover {
+  border-bottom: 1px solid rgba(0, 0, 255, 0.7);
+}
+
+.description {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 50px;
+}
+.description a {
+  text-decoration: none;
+}
+.description .description-product {
+  transition: 1s;
+}
+.description .description-product:hover {
+  transform: scale(1.1);
+}
+.description .description-product .item {
+  background-color: rgba(88, 88, 88, 0.1);
+  text-align: center;
+  padding: 10px;
+  border-radius: 20px;
+  color: black;
+}
+.description .description-product .item h4 {
+  font-size: 20px;
+  font-weight: 200;
+}
+.description .description-product .item p {
+  color: rgba(0, 0, 255, 0.7);
+}
+
+.product-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+.product-button button {
+  margin-top: 40px;
+  background-color: rgba(0, 0, 255, 0.7);
+  font-size: 20px;
+  padding: 20px;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.product-button button:hover {
+  background-color: blue;
+}
+
+.block-text {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-around;
+  margin-top: 100px;
+}
+.block-text h2 {
+  font-weight: 200;
+}
+.block-text p {
+  width: 450px;
+  margin-right: 50px;
+  font-size: 18px;
+  line-height: 25px;
+  color: rgba(88, 88, 88, 0.9);
+}
+
+.consultation {
+  background-color: rgba(88, 88, 88, 0.1);
+  margin-right: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-radius: 50px;
+  margin-top: 100px;
+}
+.consultation h2 {
+  font-size: 35px;
+  font-weight: 300;
+}
+.consultation p {
+  font-size: 20px;
+  width: 60%;
+}
+.consultation button {
+  margin-top: 40px;
+  background-color: rgba(0, 0, 255, 0.7);
+  font-size: 18px;
+  padding: 20px;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.consultation button:hover {
+  background-color: blue;
+}
+
+.form {
+  background-color: red;
+  height: 200px;
+  width: 200px;
+  position: fixed;
+  top: 40%;
+  left: 40%;
+  bottom: 0%;
+  display: none;
+}
+
+.delivery {
+  margin-top: 120px;
+  margin-right: 60px;
+  border-radius: 50px;
+  background-color: rgba(88, 88, 88, 0.1);
+  background-image: url(https://static.tildacdn.com/tild3762-3464-4732-a338-326433316332/svg3.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 400px;
+}
+.delivery .delivery-text {
+  text-align: center;
+  width: 50%;
+}
+.delivery .delivery-text h2 {
+  font-size: 30px;
+  font-weight: 500;
+}
+.delivery .delivery-text p {
+  margin-top: 70px;
+  font-size: 20px;
+}
+.delivery .delivery-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -20px;
+}
+.delivery .delivery-imgLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 150px;
+}
+
+.footer {
+  background-color: rgba(0, 0, 255, 0.7);
+  display: flex;
+  flex-wrap: wrap-reverse;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 15px;
+  margin-top: 100px;
+}
+.footer .contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+}
+.footer .contact h1 {
+  color: white;
+  font-weight: 300;
+}
+.footer .contact a {
+  text-decoration: none;
+  color: white;
+}
+.footer .link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+}
+.footer .link a {
+  text-decoration: none;
+  color: white;
+  font-size: 17px;
 }/*# sourceMappingURL=style.css.map */
