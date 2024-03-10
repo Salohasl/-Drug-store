@@ -431,4 +431,8 @@ main .content .content-right img {
   text-decoration: none;
   color: white;
   font-size: 17px;
+  transition: 0.5s;
+}
+.footer .link a:hover {
+  color: black;
 }/*# sourceMappingURL=style.css.map */

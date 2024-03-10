@@ -267,6 +267,79 @@ main{
             }
         }
     }
+
+    .delivery{
+      padding-top: 20px;
+      width: 60%;
+      border-bottom: 1px solid rgba(82, 82, 82, 0.1);
+      z-index: 5;
+      p{
+          margin-bottom: 20px;
+      }
+      .delivery-item{
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+          justify-content: space-between;
+          cursor: pointer;
+          &:hover{
+              .btnDelivery{
+                  background-color: rgba(82, 82, 82, 0.1);
+              }
+          }
+          p{
+              font-size: 20px;
+              font-weight: bold;
+          }
+          .btnDelivery{
+              height: 40px;
+              width: 40px;
+              border-radius: 20px;
+              position: relative;
+              margin-top: -10px;
+              transition: .4s;
+              border: none;
+              cursor: pointer;
+              background-color: white;
+              &.rotate{
+                  transform: rotate(45deg);
+              }
+              span{
+                  position: absolute;
+                  height: 20px;
+                  left: 19px;
+                  top: 10px;
+                  &:nth-child(1){
+                      border: 1px solid black;
+                  }
+                  &:nth-child(2){
+                      border: 1px solid black;
+                      transform: rotate(90deg);
+                  }
+              }
+          }
+      }
+      .delivery-descrip{
+          display: none;
+          &.active{
+              display: block;
+              animation: show .6s linear;
+          }
+          p{
+              font-size: 14px;
+          }
+          a{
+            color: $color;
+            transition: .5s;
+            &:hover{
+              color: black;
+            }
+            &:visited{
+              color: green;
+            }
+          }
+      }
+  }
 }
   
 @keyframes show {
@@ -316,6 +389,9 @@ main{
         text-decoration: none;
         color: white;
         font-size: 17px;
+        &:nth-child(1){
+          color: black;
+        }
       }
     }
   }

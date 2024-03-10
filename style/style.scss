@@ -447,6 +447,10 @@ main{
       text-decoration: none;
       color: white;
       font-size: 17px;
+      transition: .5s;
+      &:hover{
+        color: black;
+      }
     }
   }
 }
