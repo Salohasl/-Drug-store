@@ -205,7 +205,9 @@ main .catalog .product {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 80px;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 50px;
 }
 main .catalog .product a {
   text-decoration: none;

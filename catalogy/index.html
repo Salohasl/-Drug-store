@@ -52,38 +52,38 @@
     <div class="catalog">
         <div class="filter">
             <div class="filter-setting">
-                <input type="radio" name="radio" id="mite">
-                <label for="mite">От клещей и блох</label>
+                <input type="radio" name="radio" id="1" class="filterBtn" value="От клещей и блох">
+                <label for="1">От клещей и блох</label>
             </div>
 
             <div class="filter-setting">
-                <input type="radio" name="radio" id="antiInflammatory">
-                <label for="antiInflammatory">Противовоспалительные</label>
+                <input type="radio" name="radio" id="2" class="filterBtn" value="Противовоспалительные">
+                <label for="2">Противовоспалительные</label>
             </div>
 
             <div class="filter-setting">
-                <input type="radio" name="radio" id="worm">
-                <label for="worm">Препарат от глистов</label>
+                <input type="radio" name="radio" id="3" class="filterBtn" value="Препарат от глистов">
+                <label for="3">Препарат от глистов</label>
             </div>
 
             <div class="filter-setting">
-                <input type="radio" name="radio" id="hormonal">
-                <label for="hormonal">Гормональные</label>
+                <input type="radio" name="radio" id="4" class="filterBtn" value="Гормональные">
+                <label for="4">Гормональные</label>
             </div>
 
         </div>
 
         <div class="product">
 
-            <a href="#"><div class="description-product" id="mite">
+            <a href="#"><div class="description-product" data-name="От клещей и блох">
               <img src="/img/bravecto.jpg" alt="">
               <div class="item">
                 <h4>Бравекто</h4>
                 <p>2 700р</p>
               </div>
             </div></a>
-  
-            <a href="#"><div class="description-product" id="mite">
+          
+            <a href="#"><div class="description-product" data-name="От клещей и блох">
               <img src="/img/necsgard.jpg" alt="">
               <div class="item">
                 <h4>Фронтлайн Нексгард</h4>
@@ -91,7 +91,7 @@
               </div>
             </div></a>
   
-            <a href="#"><div class="description-product" id="mite">
+            <a href="#"><div class="description-product"  data-name="От клещей и блох">
               <img src="/img/simparica.jpg" alt="">
               <div class="item">
                 <h4>Симпарика</h4>
@@ -99,7 +99,7 @@
               </div>
             </div></a>
   
-            <a href="#"><div class="description-product" id="mite">
+            <a href="#"><div class="description-product"  data-name="От клещей и блох">
               <img src="/img/spectra.jpg" alt="">
               <div class="item">
                 <h4>Нексгард Спектра</h4>
@@ -107,15 +107,15 @@
               </div>
             </div></a>
   
-            <a href="#"><div class="description-product" id="mite">
+            <a href="#"><div class="description-product"  data-name="От клещей и блох">
               <img src="/img/foresto.jpg" alt="">
               <div class="item">
                 <h4>Форесто</h4>
                 <p>2 600р</p>
               </div>
             </div></a>    
-            
-            <a href="#"><div class="description-product" id="antiInflammatory">
+
+            <a href="#"><div class="description-product" id="antiInflammatory" data-name="Противовоспалительные">
                 <img src="/img/previcos.jpg" alt="">
                 <div class="item">
                   <h4>Превикокс</h4>
@@ -123,7 +123,8 @@
                 </div>
               </div></a>
 
-              <a href="#"><div class="description-product" id="worm">
+
+              <a href="#"><div class="description-product"  data-name="Препарат от глистов">
                 <img src="/img/milbemax.jpg" alt="">
                 <div class="item">
                   <h4>Мильбемакс (для собак)</h4>
@@ -131,7 +132,7 @@
                 </div>
               </div></a>
     
-              <a href="#"><div class="description-product" id="worm">
+              <a href="#"><div class="description-product"  data-name="Препарат от глистов">
                 <img src="/img/milbemax2.jpg" alt="">
                 <div class="item">
                   <h4>Мильбемакс (для кошек)</h4>
@@ -139,7 +140,7 @@
                 </div>
               </div></a>
 
-              <a href="#"><div class="description-product" id="hormonal">
+              <a href="#"><div class="description-product" id="hormonal" data-name="Гормональные">
                 <img src="/img/vetoril.jpg" alt="">
                 <div class="item">
                   <h4>Веторил</h4>
@@ -164,7 +165,7 @@
       <a href="/politica.html" target="_blank">Политика конфиденциальности</a>
     </div>
   </footer>
-
+<script src="/script/catalog.js"></script>
 <script src="/script/up.js"></script>
 </body>
 </html>
