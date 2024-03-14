@@ -110,6 +110,19 @@
           color: $color;
         }
       }
+      button{
+        background-color: white;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        &::before{
+          content: attr(data-count);
+          font-size: 17px;
+          position: absolute;
+          left: 21px;
+          top: -7px;
+        }
+      }
     }
     
     .logo{

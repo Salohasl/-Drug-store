@@ -104,6 +104,19 @@ header .link a img {
 header .link a:hover {
   color: rgba(0, 0, 255, 0.7);
 }
+header .link button {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+header .link button::before {
+  content: attr(data-count);
+  font-size: 17px;
+  position: absolute;
+  left: 21px;
+  top: -7px;
+}
 header .logo {
   display: flex;
   flex-direction: column;
