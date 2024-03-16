@@ -20,6 +20,9 @@ function filterFunc(){
                 }
             }
             item.classList.toggle('active');
+
+            
+
         })
     })
 }filterFunc();
