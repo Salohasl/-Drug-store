@@ -18,7 +18,7 @@
                 <hr>
                 %message%
                 <hr>
-                Телефон: <b>%phone%</b>
+                Email пользователя: <b>%email%</b>
                 <br>
                 Дата отправки: <b>%date%</b>
                 <br>
@@ -30,7 +30,7 @@
             </tr>
             <tr>
               <td bgcolor="#fff " style="padding: 20px 15px; color: #777; font-size: 14px;">
-                <p>&copy; 2024 kant-design.</p>
+                <p>&copy; 2022 Мой сайт.</p>
               </td>
             </tr>
           </tbody>

@@ -13,9 +13,8 @@ function saveLocalStorage(){
                 }
                 arrProduct.push(objProduct)
                 console.log(arrProduct)
-                localStorage.setItem('bravecto', JSON.stringify(arrProduct));
+                localStorage.setItem('koshek', JSON.stringify(arrProduct));
             }
-            window.history.back();
         }
     })
 }
