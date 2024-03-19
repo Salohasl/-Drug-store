@@ -280,10 +280,12 @@ main .wrapper {
 }
 .show .product-show .product-item h2 {
   font-size: 20px;
+  width: 150px;
   color: rgba(0, 0, 255, 0.7);
 }
 .show .product-show .product-item p {
   font-size: 14px;
+  width: 150px;
 }
 .show .product-show .product-count {
   display: flex;

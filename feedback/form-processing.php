@@ -43,7 +43,7 @@ const EMAIL_SETTINGS = [
   'subject' => 'Сообщение с формы обратной связи', // тема письма
   'host' => 'ssl://smtp.yandex.ru', // SMTP-хост
   'username' => 'zavmaksym@yandex.ru', // // SMTP-пользователь
-  'password' => 'tjxyndujcjurlznc', // SMTP-пароль
+  'password' => '*******', // SMTP-пароль
   'port' => '465' // SMTP-порт
 ];
 const HAS_SEND_NOTIFICATION = false;
@@ -92,6 +92,14 @@ if (!empty($_POST['email'])) {
   $data['errors']['email'] = 'Заполните это поле.';
   itc_log('Не заполнено поле email.');
 }
+// валидация суммы
+if (isset($_POST['sum'])) {
+  $data['form']['sum'] = htmlspecialchars($_POST['sum']);
+} 
+// валидация города
+if (isset($_POST['order'])) {
+  $data['form']['order'] = htmlspecialchars($_POST['order']);
+} 
 
 // валидация message
 if (!empty($_POST['message'])) {
@@ -128,47 +136,7 @@ if ($_POST['agree'] == 'true') {
   itc_log('Не установлен флажок для поля agree.');
 }
 
-// валидация прикреплённых файлов
-if (empty($_FILES['attach'])) {
-  if (HAS_ATTACH_REQUIRED) {
-    $data['result'] = 'error';
-    $data['errors']['attach'] = 'Заполните это поле.';
-    itc_log('Не прикреплены файлы к форме.');
-  }
-} else {
-  foreach ($_FILES['attach']['error'] as $key => $error) {
-    if ($error == UPLOAD_ERR_OK) {
-      $name = basename($_FILES['attach']['name'][$key]);
-      $size = $_FILES['attach']['size'][$key];
-      $mtype = mime_content_type($_FILES['attach']['tmp_name'][$key]);
-      if (!in_array($mtype, ALLOWED_MIME_TYPES)) {
-        $data['result'] = 'error';
-        $data['errors']['attach'][$key] = 'Файл имеет не разрешённый тип.';
-        itc_log('Прикреплённый файл ' . $name . ' имеет не разрешённый тип.');
-      } else if ($size > MAX_FILE_SIZE) {
-        $data['result'] = 'error';
-        $data['errors']['attach'][$key] = 'Размер файла превышает допустимый.';
-        itc_log('Размер файла ' . $name . ' превышает допустимый.');
-      }
-    }
-  }
-  if ($data['result'] === 'success') {
-    // перемещаем файлы в папку UPLOAD_PATH
-    foreach ($_FILES['attach']['name'] as $key => $attach) {
-      $ext = mb_strtolower(pathinfo($_FILES['attach']['name'][$key], PATHINFO_EXTENSION));
-      $name = basename($_FILES['attach']['name'][$key], $ext);
-      $tmp = $_FILES['attach']['tmp_name'][$key];
-      $newName = rtrim($name, '.') . '_' . uniqid() . '.' . $ext;
-      if (!move_uploaded_file($tmp, UPLOAD_PATH . $newName)) {
-        $data['result'] = 'error';
-        $data['errors']['attach'][$key] = 'Ошибка при загрузке файла.';
-        itc_log('Ошибка при перемещении файла ' . $name . '.');
-      } else {
-        $attachs[] = UPLOAD_PATH . $newName;
-      }
-    }
-  }
-}
+
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
@@ -181,8 +149,8 @@ require 'vendor/phpmailer/phpmailer/src/SMTP.php';
 if ($data['result'] == 'success' && HAS_SEND_EMAIL == true) {
   // получаем содержимое email шаблона и заменяем в нём
   $template = file_get_contents(dirname(__FILE__) . '/template/email.tpl');
-  $search = ['%subject%', '%name%', '%email%', '%message%', '%date%'];
-  $replace = [EMAIL_SETTINGS['subject'], $data['form']['name'], $data['form']['email'], $data['form']['message'], date('d.m.Y H:i')];
+  $search = ['%subject%', '%name%', '%email%', '%message%', '%sum%', '%order%', '%date%'];
+  $replace = [EMAIL_SETTINGS['subject'], $data['form']['name'], $data['form']['email'], $data['form']['message'], $data['form']['sum'], $data['form']['order'], date('d.m.Y H:i')];
   $body = str_replace($search, $replace, $template);
   // добавление файлов в виде ссылок
   if (HAS_ATTACH_IN_BODY && count($attachs)) {
@@ -265,6 +233,8 @@ if ($data['result'] == 'success' && HAS_WRITE_TXT) {
   $output .= 'Имя: ' . $data['form']['name'] . PHP_EOL;
   $output .= 'Email: ' . $data['form']['email'] . PHP_EOL;
   $output .= 'Сообщение: ' . $data['form']['message'] . PHP_EOL;
+  $output .= 'Заказ: ' . $data['form']['order'] . PHP_EOL;
+  $output .= 'Сумма: ' . $data['form']['sum'] . PHP_EOL;
   if (count($attachs)) {
     $output .= 'Файлы:' . PHP_EOL;
     foreach ($attachs as $attach) {
