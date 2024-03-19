@@ -16,8 +16,6 @@ function quantityOfGoods(){
     }else{
         basketBlock.dataset.count = localStorage.getItem('length');
     }
-    
-    console.log(basketBlock.dataset.count)
 }
 
 quantityOfGoods();

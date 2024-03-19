@@ -46,7 +46,7 @@
     height: 3px;
     position: absolute;
     transform: translate(-50%, -50%);
-    background-color: white;
+    background-color: $color;
     transition: all 0.5s;
     border-radius: 2px;
   }
@@ -89,6 +89,9 @@
         &:hover{
           color: $color;
         }
+      }
+      .link{
+        display: none;
       }
     }
     .link{

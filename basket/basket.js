@@ -45,9 +45,9 @@ function removeLocalStorage(){
         let divCenter = document.createElement('div');
         divCenter.classList.add('product-count');
         divCenter.innerHTML = `
-            <button class="min" data-price="${product.price}">-</button>
+            <button class="min" data-price="${product.price}" data-name="${product.name}">-</button>
             <p class="res">1</p>
-            <button class="max" data-price="${product.price}">+</button>
+            <button class="max" data-price="${product.price}" data-name="${product.name}">+</button>
         `;
         productDiv.appendChild(divCenter);
 
@@ -171,15 +171,26 @@ function quantityOfGoods (){
                     num = price.textContent.slice(0, -1); // Удаляем последний символ
                     num = Number(num) + Number(price.dataset.price); // Увеличиваем значение 
                     price.textContent = num + 'р'; // Добавляем обратно рубль и обновляем текст элемента
-
+                    quantity = price.dataset.res;
                     let totalPrice = Number(resultPrice.textContent) + Number(price.dataset.price);
                     resultPrice.textContent = totalPrice;
                     sum.value = "Сумма:" + ' ' + resultPrice.textContent + ' ' + 'р';
 
 
+                    
                 }
             }
-                
+
+            let arr = [];
+            for(let product of savedProduct){
+                if(product.name == button.dataset.name){
+                    arr.push(product.name + ' ' + product.desc);
+
+                    order.value += arr + ' ' + 'Количество:' + quantity +  ',' + '\n ';
+                }
+
+            }
+
         });
     });
     
@@ -205,6 +216,12 @@ function quantityOfGoods (){
         
          
                 }
+            }
+            for(let product of savedProduct){
+                if(product.name == button.dataset.name){
+                    order.value += product.name + ' ' + product.desc + ' ' + 'Количество:' + --quantity +  ',' + '\n ';
+                }
+
             }
         });
     });

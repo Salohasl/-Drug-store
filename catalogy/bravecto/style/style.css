@@ -42,7 +42,7 @@ html {
   height: 3px;
   position: absolute;
   transform: translate(-50%, -50%);
-  background-color: white;
+  background-color: rgba(0, 0, 255, 0.7);
   transition: all 0.5s;
   border-radius: 2px;
 }
@@ -83,6 +83,9 @@ header nav a {
 }
 header nav a:hover {
   color: rgba(0, 0, 255, 0.7);
+}
+header nav .link {
+  display: none;
 }
 header .link {
   display: flex;
@@ -149,14 +152,16 @@ main {
 main .link {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
 main .link a button {
   position: fixed;
+  margin-top: -20px;
   left: 60px;
   border: none;
-  background-color: white;
+  background-color: rgba(0, 0, 255, 0);
   color: rgba(0, 0, 255, 0.7);
   padding: 10px;
   font-size: 20px;

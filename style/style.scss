@@ -92,6 +92,9 @@ header{
         color: $color;
       }
     }
+    .link{
+      display: none;
+    }
   }
   .link{
     display: flex;
@@ -157,6 +160,7 @@ header{
 main{
   padding-top: 170px;
   margin-left: 60px;
+  margin-right: 60px;
   .content{
     
     display: flex;
@@ -196,6 +200,7 @@ main{
       }
       .like{
         display: flex;
+        
         flex-direction: row;
         align-items: center;
         justify-content: flex-start;
@@ -241,6 +246,7 @@ main{
     .name{
       margin-top: 50px;
       display: flex;
+      flex-wrap: wrap;
       flex-direction: row;
       align-items: center;
       justify-content: center;
@@ -374,14 +380,8 @@ main{
 
 
 .form{
-  background-color: red;
-  height: 200px;
-  width: 200px;
-  position: fixed;
-  top: 40%;
-  left: 40%;
-  bottom: 0%;
   display: none;
+  margin-top: 50px;
 }
 
 

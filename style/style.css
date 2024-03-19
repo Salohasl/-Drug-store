@@ -84,6 +84,9 @@ header nav a {
 header nav a:hover {
   color: rgba(0, 0, 255, 0.7);
 }
+header nav .link {
+  display: none;
+}
 header .link {
   display: flex;
   flex-direction: row;
@@ -145,6 +148,7 @@ header .logo p {
 main {
   padding-top: 170px;
   margin-left: 60px;
+  margin-right: 60px;
 }
 main .content {
   display: flex;
@@ -226,6 +230,7 @@ main .content .content-right img {
 .catalogy .catalogy-product .name {
   margin-top: 50px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -357,14 +362,8 @@ main .content .content-right img {
 }
 
 .form {
-  background-color: red;
-  height: 200px;
-  width: 200px;
-  position: fixed;
-  top: 40%;
-  left: 40%;
-  bottom: 0%;
   display: none;
+  margin-top: 50px;
 }
 
 .delivery {
