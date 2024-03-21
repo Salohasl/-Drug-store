@@ -8,6 +8,13 @@ menu.classList.toggle('popUp');
 link.classList.remove('active');
 });
 
+let linkBtn = document.querySelectorAll('.linkBtn');
+linkBtn.forEach(elem => {
+    elem.addEventListener('click', ()=>{
+        menuBtn.classList.remove('active');
+        menu.classList.remove('popUp');
+    })
+})
 
 function quantityOfGoods(){
     let basketBlock = document.querySelector('.basketBlock');

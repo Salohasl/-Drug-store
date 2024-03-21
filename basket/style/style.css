@@ -64,7 +64,7 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: white;
+  background-color: rgba(0, 0, 255, 0.1);
   z-index: 5;
   height: 100px;
 }
@@ -80,6 +80,7 @@ header nav a {
   text-decoration: none;
   color: black;
   transition: 0.5s;
+  font-size: 20px;
 }
 header nav a:hover {
   color: rgba(0, 0, 255, 0.7);
@@ -108,7 +109,7 @@ header .link a:hover {
   color: rgba(0, 0, 255, 0.7);
 }
 header .link button {
-  background-color: white;
+  background-color: rgba(0, 0, 255, 0);
   border: none;
   cursor: pointer;
   position: relative;
@@ -146,7 +147,7 @@ header .logo p {
 
 main {
   padding-top: 170px;
-  background-color: rgba(94, 94, 94, 0.7);
+  background-color: rgba(0, 0, 255, 0.1);
 }
 main .wrapper {
   display: flex;
@@ -232,7 +233,6 @@ main .wrapper {
   padding: 50px;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: center;
 }

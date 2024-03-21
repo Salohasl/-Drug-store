@@ -15,7 +15,9 @@ html {
   scroll-behavior: smooth;
 }
 
-
+body{
+  background-color: rgb(0,0,255, 0.1);
+}
 
 .menuBtn.active span:nth-of-type(1) {
   display: none;
@@ -72,7 +74,7 @@ header{
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: white;
+  background-color: rgb(0,0,255, 0.1);//rgb(0,0,255, 0.1)
   z-index: 5;
   height: 100px;
   nav{
@@ -88,6 +90,7 @@ header{
       text-decoration: none;
       color: black;
       transition: .5s;
+      font-size: 20px;
       &:hover{
         color: $color;
       }
@@ -116,7 +119,7 @@ header{
       }
     }
     button{
-      background-color: white;
+      background-color: rgb(0,0,255, 0);
       border: none;
       cursor: pointer;
       position: relative;

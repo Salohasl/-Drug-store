@@ -72,7 +72,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: white;
+    background-color:rgb(0,0,255, 0.1);
     z-index: 5;
     height: 100px;
     nav{
@@ -88,6 +88,7 @@
         text-decoration: none;
         color: black;
         transition: .5s;
+        font-size: 20px;
         &:hover{
           color: $color;
         }
@@ -116,7 +117,7 @@
         }
       }
       button{
-        background-color: white;
+        background-color: rgb(0,0,255, 0);
         border: none;
         cursor: pointer;
         position: relative;
@@ -157,7 +158,7 @@
   main{
     padding-top: 170px;
 
-    background-color: rgba(94, 94, 94, 0.7);
+    background-color: rgb(0,0,255, 0.1);
     .wrapper{
         display: flex;
         align-items: center;

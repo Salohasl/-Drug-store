@@ -55,6 +55,10 @@ html {
   top: calc(60% + 5px);
 }
 
+body {
+  background-color: rgba(0, 0, 255, 0.1);
+}
+
 header {
   top: 0;
   position: fixed;
@@ -64,7 +68,7 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: white;
+  background-color: rgba(0, 0, 255, 0.1);
   z-index: 5;
   height: 100px;
 }
@@ -80,6 +84,7 @@ header nav a {
   text-decoration: none;
   color: black;
   transition: 0.5s;
+  font-size: 20px;
 }
 header nav a:hover {
   color: rgba(0, 0, 255, 0.7);
@@ -108,7 +113,7 @@ header .link a:hover {
   color: rgba(0, 0, 255, 0.7);
 }
 header .link button {
-  background-color: white;
+  background-color: rgba(0, 0, 255, 0);
   border: none;
   cursor: pointer;
   position: relative;
@@ -187,8 +192,8 @@ main .link .basket {
           animation: btnUp 1.5s linear infinite;
 }
 main .link .basket:hover {
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: wheat;
   border: 1px solid black;
 }
 main .img .img2, main .img .img3, main .img .img4, main .img .img5 {
